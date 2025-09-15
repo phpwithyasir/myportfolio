@@ -84,40 +84,6 @@ h6 {
   opacity: 1;
 }
 
-/* Submenu Styling */
-.nav-menu .submenu {
-  display: none; /* Hidden by default */
-  position: absolute;
-  left: 100%;
-  top: 0;
-  background: #2c2e33;
-  padding: 10px 0;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-}
-
-.nav-menu .submenu li {
-  padding: 0;
-}
-
-.nav-menu .submenu a {
-  padding: 10px 15px;
-  font-size: 14px;
-  color: #a8a9b4;
-  white-space: nowrap;
-}
-
-.nav-menu .submenu a:hover {
-  color: #fff;
-  background: #149ddd;
-}
-
-/* Show submenu on hover */
-.nav-menu > ul > li:hover .submenu {
-  display: block;
-}
-
-
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -290,14 +256,12 @@ h6 {
 /* Note: 'object-fit' is not a valid property for background images, so you can remove it */
 }
 #hero-bg{
-  width: 100%;
   overflow: hidden;
   height: 100vh;
-  background: url("../img/hero-bg.jpeg") top center;
-  background-size:contain; /* This will make the image cover the entire viewport */
+    background: url("../img/img.jpg") top center;
+
+  background-size:cover; /* This will make the image cover the entire viewport */
   background-color: #000000;
-  background-repeat: no-repeat;
-  object-fit: contain; 
 
 }
 
@@ -341,8 +305,10 @@ h6 {
 }
 
 @media (min-width: 1024px) {
-  #hero {
-    background-attachment: fixed;
+   #hero-bg {
+  background: url("../img/my.jpg") top center;
+    background-size: cover;
+    /* background-color: #000000; optional, keeps fallback */
   }
 }
 
